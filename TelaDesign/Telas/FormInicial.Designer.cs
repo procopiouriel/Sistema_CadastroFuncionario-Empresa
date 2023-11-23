@@ -28,7 +28,19 @@ namespace Venda_Bovina
             btnRestaurar = new Button();
             btnMaximizar = new Button();
             panelMenu = new Panel();
+            dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
+            Column9 = new DataGridViewTextBoxColumn();
+            Column10 = new DataGridViewTextBoxColumn();
             panelConteudo = new Panel();
+            textBox1 = new TextBox();
             label11 = new Label();
             btnVendas = new Button();
             txt_funcao = new TextBox();
@@ -51,8 +63,9 @@ namespace Venda_Bovina
             label3 = new Label();
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
             panelCabecalho.SuspendLayout();
+            panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panelConteudo.SuspendLayout();
             SuspendLayout();
             // 
@@ -123,12 +136,73 @@ namespace Venda_Bovina
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(37, 46, 59);
+            panelMenu.Controls.Add(dataGridView1);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 46);
             panelMenu.Margin = new Padding(4, 3, 4, 3);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(199, 567);
+            panelMenu.Size = new Size(339, 567);
             panelMenu.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10 });
+            dataGridView1.Location = new Point(4, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(336, 567);
+            dataGridView1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Nome";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "CPF";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "RG";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Nascimento";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Estado Civil";
+            Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Telefone";
+            Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Email";
+            Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Endereço";
+            Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            Column9.HeaderText = "Salario";
+            Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            Column10.HeaderText = "Função";
+            Column10.Name = "Column10";
             // 
             // panelConteudo
             // 
@@ -156,18 +230,25 @@ namespace Venda_Bovina
             panelConteudo.Controls.Add(label1);
             panelConteudo.Controls.Add(label2);
             panelConteudo.Dock = DockStyle.Fill;
-            panelConteudo.Location = new Point(199, 46);
+            panelConteudo.Location = new Point(339, 46);
             panelConteudo.Margin = new Padding(4, 3, 4, 3);
             panelConteudo.Name = "panelConteudo";
-            panelConteudo.Size = new Size(734, 567);
+            panelConteudo.Size = new Size(594, 567);
             panelConteudo.TabIndex = 2;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(521, 116);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(59, 23);
+            textBox1.TabIndex = 26;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label11.ForeColor = Color.Black;
-            label11.Location = new Point(402, 103);
+            label11.Location = new Point(327, 109);
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
             label11.Size = new Size(187, 30);
@@ -183,7 +264,7 @@ namespace Venda_Bovina
             btnVendas.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnVendas.ForeColor = Color.Black;
             btnVendas.ImageAlign = ContentAlignment.MiddleLeft;
-            btnVendas.Location = new Point(14, 417);
+            btnVendas.Location = new Point(309, 438);
             btnVendas.Margin = new Padding(4, 3, 4, 3);
             btnVendas.Name = "btnVendas";
             btnVendas.Size = new Size(152, 45);
@@ -196,70 +277,70 @@ namespace Venda_Bovina
             // 
             txt_funcao.Location = new Point(229, 376);
             txt_funcao.Name = "txt_funcao";
-            txt_funcao.Size = new Size(475, 23);
+            txt_funcao.Size = new Size(351, 23);
             txt_funcao.TabIndex = 23;
             // 
             // txt_salario
             // 
             txt_salario.Location = new Point(229, 333);
             txt_salario.Name = "txt_salario";
-            txt_salario.Size = new Size(475, 23);
+            txt_salario.Size = new Size(351, 23);
             txt_salario.TabIndex = 22;
             // 
             // txt_endereco
             // 
             txt_endereco.Location = new Point(229, 296);
             txt_endereco.Name = "txt_endereco";
-            txt_endereco.Size = new Size(475, 23);
+            txt_endereco.Size = new Size(351, 23);
             txt_endereco.TabIndex = 21;
             // 
             // txt_email
             // 
             txt_email.Location = new Point(229, 257);
             txt_email.Name = "txt_email";
-            txt_email.Size = new Size(475, 23);
+            txt_email.Size = new Size(351, 23);
             txt_email.TabIndex = 20;
             // 
             // txt_telefone
             // 
             txt_telefone.Location = new Point(229, 218);
             txt_telefone.Name = "txt_telefone";
-            txt_telefone.Size = new Size(475, 23);
+            txt_telefone.Size = new Size(351, 23);
             txt_telefone.TabIndex = 19;
             // 
             // txt_estadoCivil
             // 
             txt_estadoCivil.Location = new Point(229, 179);
             txt_estadoCivil.Name = "txt_estadoCivil";
-            txt_estadoCivil.Size = new Size(475, 23);
+            txt_estadoCivil.Size = new Size(351, 23);
             txt_estadoCivil.TabIndex = 18;
             // 
             // txt_dataNascimento
             // 
             txt_dataNascimento.Location = new Point(229, 142);
             txt_dataNascimento.Name = "txt_dataNascimento";
-            txt_dataNascimento.Size = new Size(475, 23);
+            txt_dataNascimento.Size = new Size(351, 23);
             txt_dataNascimento.TabIndex = 17;
             // 
             // txt_rg
             // 
             txt_rg.Location = new Point(229, 110);
             txt_rg.Name = "txt_rg";
-            txt_rg.Size = new Size(150, 23);
+            txt_rg.Size = new Size(91, 23);
             txt_rg.TabIndex = 16;
             // 
             // txt_cpf
             // 
             txt_cpf.Location = new Point(229, 71);
             txt_cpf.Name = "txt_cpf";
-            txt_cpf.Size = new Size(475, 23);
+            txt_cpf.Size = new Size(351, 23);
             txt_cpf.TabIndex = 15;
             // 
             // txt_nome
             // 
             txt_nome.Location = new Point(229, 33);
             txt_nome.Name = "txt_nome";
-            txt_nome.Size = new Size(475, 23);
+            txt_nome.Size = new Size(351, 23);
             txt_nome.TabIndex = 14;
             // 
             // label10
@@ -383,13 +464,6 @@ namespace Venda_Bovina
             label2.Text = "Nome:";
             label2.Click += label2_Click;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(596, 110);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(108, 23);
-            textBox1.TabIndex = 26;
-            // 
             // FormInicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -404,6 +478,8 @@ namespace Venda_Bovina
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panelCabecalho.ResumeLayout(false);
+            panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panelConteudo.ResumeLayout(false);
             panelConteudo.PerformLayout();
             ResumeLayout(false);
@@ -443,5 +519,16 @@ namespace Venda_Bovina
         private TextBox txt_nome;
         private Label label11;
         private TextBox textBox1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn Column9;
+        private DataGridViewTextBoxColumn Column10;
     }
 }
