@@ -14,9 +14,9 @@ using TelaDesign;
 
 namespace Venda_Bovina
 {
-    public partial class FormInicial : Form
+    public partial class FormConsultarFuncionario : Form
     {
-        public FormInicial()
+        public FormConsultarFuncionario()
         {
             InitializeComponent();
             Consultar();
@@ -24,7 +24,7 @@ namespace Venda_Bovina
             {
                 dataGridView1.Rows.Add(str.Nome, str.Cpf, str.Rg, str.DataNascimento, str.EstadoCivil, str.Telefone, str.Email, str.Endereco, str.Salario, str.Funcao);
             }
-            
+
         }
         public void Inserir()
         {
@@ -135,47 +135,7 @@ namespace Venda_Bovina
 
         private void btnVendas_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string nome = txt_nome.Text;
-                string cpf = txt_cpf.Text;
-                string rg = txt_rg.Text;
-                DateTime dataNascimento = Convert.ToDateTime(txt_dataNascimento.Text);
-                string estadoCivil = txt_estadoCivil.Text;
-                string telefone = txt_telefone.Text;
-                string email = txt_email.Text;
-                string endereco = txt_endereco.Text;
-                double salario = Convert.ToDouble(txt_salario.Text);
-                string funcao = txt_funcao.Text;
 
-                if (nome == "" || cpf == "" || rg == "" || dataNascimento == null || telefone == "" || email == "" || endereco == "" || salario == null || funcao == "")
-                {
-                    MessageBox.Show("Preencha todos os campos!");
-                }
-                else
-                {
-                    if (Validador.CPF(cpf) == true)
-                    {
-                        Funcionario conexao = new Funcionario(nome, cpf, rg, dataNascimento, estadoCivil, telefone, email, endereco, salario, funcao);
-                        Program.funcionarios.Add(conexao);
-                        MessageBox.Show("Salvo!");
-                        Inserir();
-                        FormInicial tela = new FormInicial();
-                        this.Visible = false;
-                        tela.ShowDialog();
-                    }
-                    else
-                    {
-                        MessageBox.Show("CPF FALSO");
-                    }
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
 
         }
     }
