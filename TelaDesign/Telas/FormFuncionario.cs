@@ -14,9 +14,9 @@ using TelaDesign;
 
 namespace Venda_Bovina
 {
-    public partial class FormInicial : Form
+    public partial class FormFuncionario : Form
     {
-        public FormInicial()
+        public FormFuncionario()
         {
             InitializeComponent();
             Consultar();
@@ -24,7 +24,7 @@ namespace Venda_Bovina
             {
                 dataGridView1.Rows.Add(str.Nome, str.Cpf, str.Rg, str.DataNascimento, str.EstadoCivil, str.Telefone, str.Email, str.Endereco, str.Salario, str.Funcao);
             }
-            
+
         }
         public void Inserir()
         {

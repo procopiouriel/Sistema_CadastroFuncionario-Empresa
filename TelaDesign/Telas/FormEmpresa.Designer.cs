@@ -1,7 +1,7 @@
 ﻿
 namespace Venda_Bovina
 {
-    partial class FormInicial
+    partial class FormEmpresa
     {
         /// <summary>
         /// Required designer variable.
@@ -22,37 +22,36 @@ namespace Venda_Bovina
         }
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicial));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmpresa));
             panelCabecalho = new Panel();
             btnFechar = new Button();
             btnRestaurar = new Button();
             btnMaximizar = new Button();
             panelMenu = new Panel();
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
-            Column10 = new DataGridViewTextBoxColumn();
             panelConteudo = new Panel();
-            textBox1 = new TextBox();
-            label11 = new Label();
-            btnVendas = new Button();
-            txt_funcao = new TextBox();
-            txt_salario = new TextBox();
-            txt_endereco = new TextBox();
-            txt_email = new TextBox();
-            txt_telefone = new TextBox();
-            txt_estadoCivil = new TextBox();
-            txt_dataNascimento = new TextBox();
-            txt_rg = new TextBox();
             txt_cpf = new TextBox();
-            txt_nome = new TextBox();
+            txt_proprietario = new TextBox();
+            btn_grande = new RadioButton();
+            btn_medio = new RadioButton();
+            btn_pequeno = new RadioButton();
+            btn_filial = new RadioButton();
+            btn_matriz = new RadioButton();
+            txt_telefone = new MaskedTextBox();
+            btn_lucroReal = new RadioButton();
+            btn_simplesNacional = new RadioButton();
+            combo_situacaoCadastral = new ComboBox();
+            combo_endereco = new ComboBox();
+            combo_naturezaJuridica = new ComboBox();
+            label15 = new Label();
+            label14 = new Label();
+            label13 = new Label();
+            label12 = new Label();
+            btnVendas = new Button();
+            txt_capital = new TextBox();
+            txt_dataInicio = new TextBox();
+            txt_nomeFantasia = new TextBox();
+            txt_razaoSocial = new TextBox();
+            txt_cnpj = new TextBox();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
@@ -63,15 +62,15 @@ namespace Venda_Bovina
             label3 = new Label();
             label1 = new Label();
             label2 = new Label();
+            label11 = new Label();
             panelCabecalho.SuspendLayout();
-            panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panelConteudo.SuspendLayout();
             SuspendLayout();
             // 
             // panelCabecalho
             // 
             panelCabecalho.BackColor = Color.Goldenrod;
+            panelCabecalho.Controls.Add(label11);
             panelCabecalho.Controls.Add(btnFechar);
             panelCabecalho.Controls.Add(btnRestaurar);
             panelCabecalho.Controls.Add(btnMaximizar);
@@ -136,7 +135,6 @@ namespace Venda_Bovina
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(37, 46, 59);
-            panelMenu.Controls.Add(dataGridView1);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 46);
             panelMenu.Margin = new Padding(4, 3, 4, 3);
@@ -144,81 +142,31 @@ namespace Venda_Bovina
             panelMenu.Size = new Size(339, 567);
             panelMenu.TabIndex = 1;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10 });
-            dataGridView1.Location = new Point(4, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(336, 567);
-            dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Nome";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "CPF";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "RG";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Nascimento";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Estado Civil";
-            Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Telefone";
-            Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Email";
-            Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Endereço";
-            Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "Salario";
-            Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            Column10.HeaderText = "Função";
-            Column10.Name = "Column10";
-            // 
             // panelConteudo
             // 
-            panelConteudo.Controls.Add(textBox1);
-            panelConteudo.Controls.Add(label11);
-            panelConteudo.Controls.Add(btnVendas);
-            panelConteudo.Controls.Add(txt_funcao);
-            panelConteudo.Controls.Add(txt_salario);
-            panelConteudo.Controls.Add(txt_endereco);
-            panelConteudo.Controls.Add(txt_email);
-            panelConteudo.Controls.Add(txt_telefone);
-            panelConteudo.Controls.Add(txt_estadoCivil);
-            panelConteudo.Controls.Add(txt_dataNascimento);
-            panelConteudo.Controls.Add(txt_rg);
             panelConteudo.Controls.Add(txt_cpf);
-            panelConteudo.Controls.Add(txt_nome);
+            panelConteudo.Controls.Add(txt_proprietario);
+            panelConteudo.Controls.Add(btn_grande);
+            panelConteudo.Controls.Add(btn_medio);
+            panelConteudo.Controls.Add(btn_pequeno);
+            panelConteudo.Controls.Add(btn_filial);
+            panelConteudo.Controls.Add(btn_matriz);
+            panelConteudo.Controls.Add(txt_telefone);
+            panelConteudo.Controls.Add(btn_lucroReal);
+            panelConteudo.Controls.Add(btn_simplesNacional);
+            panelConteudo.Controls.Add(combo_situacaoCadastral);
+            panelConteudo.Controls.Add(combo_endereco);
+            panelConteudo.Controls.Add(combo_naturezaJuridica);
+            panelConteudo.Controls.Add(label15);
+            panelConteudo.Controls.Add(label14);
+            panelConteudo.Controls.Add(label13);
+            panelConteudo.Controls.Add(label12);
+            panelConteudo.Controls.Add(btnVendas);
+            panelConteudo.Controls.Add(txt_capital);
+            panelConteudo.Controls.Add(txt_dataInicio);
+            panelConteudo.Controls.Add(txt_nomeFantasia);
+            panelConteudo.Controls.Add(txt_razaoSocial);
+            panelConteudo.Controls.Add(txt_cnpj);
             panelConteudo.Controls.Add(label10);
             panelConteudo.Controls.Add(label9);
             panelConteudo.Controls.Add(label8);
@@ -236,24 +184,186 @@ namespace Venda_Bovina
             panelConteudo.Size = new Size(594, 567);
             panelConteudo.TabIndex = 2;
             // 
-            // textBox1
+            // txt_cpf
             // 
-            textBox1.Location = new Point(521, 116);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(59, 23);
-            textBox1.TabIndex = 26;
+            txt_cpf.Location = new Point(434, 427);
+            txt_cpf.Name = "txt_cpf";
+            txt_cpf.Size = new Size(154, 23);
+            txt_cpf.TabIndex = 45;
             // 
-            // label11
+            // txt_proprietario
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = Color.Black;
-            label11.Location = new Point(327, 109);
-            label11.Margin = new Padding(4, 0, 4, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(187, 30);
-            label11.TabIndex = 25;
-            label11.Text = "Orgão Expedidor:";
+            txt_proprietario.Location = new Point(226, 427);
+            txt_proprietario.Name = "txt_proprietario";
+            txt_proprietario.Size = new Size(138, 23);
+            txt_proprietario.TabIndex = 44;
+            // 
+            // btn_grande
+            // 
+            btn_grande.AutoSize = true;
+            btn_grande.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_grande.Location = new Point(405, 350);
+            btn_grande.Name = "btn_grande";
+            btn_grande.Size = new Size(69, 21);
+            btn_grande.TabIndex = 43;
+            btn_grande.TabStop = true;
+            btn_grande.Text = "Grande";
+            btn_grande.UseVisualStyleBackColor = true;
+            // 
+            // btn_medio
+            // 
+            btn_medio.AutoSize = true;
+            btn_medio.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_medio.Location = new Point(316, 350);
+            btn_medio.Name = "btn_medio";
+            btn_medio.Size = new Size(64, 21);
+            btn_medio.TabIndex = 42;
+            btn_medio.TabStop = true;
+            btn_medio.Text = "Médio";
+            btn_medio.UseVisualStyleBackColor = true;
+            // 
+            // btn_pequeno
+            // 
+            btn_pequeno.AutoSize = true;
+            btn_pequeno.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_pequeno.Location = new Point(226, 350);
+            btn_pequeno.Name = "btn_pequeno";
+            btn_pequeno.Size = new Size(77, 21);
+            btn_pequeno.TabIndex = 41;
+            btn_pequeno.TabStop = true;
+            btn_pequeno.Text = "Pequeno";
+            btn_pequeno.UseVisualStyleBackColor = true;
+            // 
+            // btn_filial
+            // 
+            btn_filial.AutoSize = true;
+            btn_filial.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_filial.Location = new Point(405, 311);
+            btn_filial.Name = "btn_filial";
+            btn_filial.Size = new Size(51, 21);
+            btn_filial.TabIndex = 40;
+            btn_filial.TabStop = true;
+            btn_filial.Text = "Filial";
+            btn_filial.UseVisualStyleBackColor = true;
+            // 
+            // btn_matriz
+            // 
+            btn_matriz.AutoSize = true;
+            btn_matriz.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_matriz.Location = new Point(226, 311);
+            btn_matriz.Name = "btn_matriz";
+            btn_matriz.Size = new Size(63, 21);
+            btn_matriz.TabIndex = 39;
+            btn_matriz.TabStop = true;
+            btn_matriz.Text = "Matriz";
+            btn_matriz.UseVisualStyleBackColor = true;
+            // 
+            // txt_telefone
+            // 
+            txt_telefone.Location = new Point(226, 234);
+            txt_telefone.Mask = "(00) 0000-0000";
+            txt_telefone.Name = "txt_telefone";
+            txt_telefone.Size = new Size(351, 23);
+            txt_telefone.TabIndex = 38;
+            // 
+            // btn_lucroReal
+            // 
+            btn_lucroReal.AutoSize = true;
+            btn_lucroReal.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_lucroReal.Location = new Point(407, 157);
+            btn_lucroReal.Name = "btn_lucroReal";
+            btn_lucroReal.Size = new Size(172, 21);
+            btn_lucroReal.TabIndex = 37;
+            btn_lucroReal.TabStop = true;
+            btn_lucroReal.Text = "Lucro Presumido ou Real";
+            btn_lucroReal.UseVisualStyleBackColor = true;
+            // 
+            // btn_simplesNacional
+            // 
+            btn_simplesNacional.AutoSize = true;
+            btn_simplesNacional.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_simplesNacional.Location = new Point(226, 160);
+            btn_simplesNacional.Name = "btn_simplesNacional";
+            btn_simplesNacional.Size = new Size(126, 21);
+            btn_simplesNacional.TabIndex = 36;
+            btn_simplesNacional.TabStop = true;
+            btn_simplesNacional.Text = "Simples Nacional";
+            btn_simplesNacional.UseVisualStyleBackColor = true;
+            // 
+            // combo_situacaoCadastral
+            // 
+            combo_situacaoCadastral.FormattingEnabled = true;
+            combo_situacaoCadastral.Items.AddRange(new object[] { "Ativa", "Nula", "Suspensa", "Inapta", "Baixada" });
+            combo_situacaoCadastral.Location = new Point(226, 121);
+            combo_situacaoCadastral.Name = "combo_situacaoCadastral";
+            combo_situacaoCadastral.Size = new Size(351, 23);
+            combo_situacaoCadastral.TabIndex = 35;
+            // 
+            // combo_endereco
+            // 
+            combo_endereco.FormattingEnabled = true;
+            combo_endereco.Items.AddRange(new object[] { "Acre (AC)", "Alagoas (AL)", "Amapá (AP)", "Amazonas (AM)", "Bahia (BA)", "Ceará (CE)", "Distrito Federal (DF)", "Espírito Santo (ES)", "Goiás (GO)", "Maranhão (MA)", "Mato Grosso (MT)", "Mato Grosso do Sul (MS)", "Minas Gerais (MG)", "Pará (PA)", "Paraíba (PB)", "Paraná (PR)", "Pernambuco (PE)", "Piauí (PI)", "Rio de Janeiro (RJ)", "Rio Grande do Norte (RN)", "Rio Grande do Sul (RS)", "Rondônia (RO)", "Roraima (RR)", "Santa Catarina (SC)", "São Paulo (SP)", "Sergipe (SE)", "Tocantins (TO)" });
+            combo_endereco.Location = new Point(468, 275);
+            combo_endereco.Name = "combo_endereco";
+            combo_endereco.Size = new Size(120, 23);
+            combo_endereco.TabIndex = 34;
+            // 
+            // combo_naturezaJuridica
+            // 
+            combo_naturezaJuridica.FormattingEnabled = true;
+            combo_naturezaJuridica.Items.AddRange(new object[] { "EI - (Empresario Individual)", "MEI - (Microempreendedor Individual)", "Sociedade Anonima", "Sociedade Simples Limitada", "Sociedade Limitada Unipessoal" });
+            combo_naturezaJuridica.Location = new Point(226, 389);
+            combo_naturezaJuridica.Name = "combo_naturezaJuridica";
+            combo_naturezaJuridica.Size = new Size(362, 23);
+            combo_naturezaJuridica.TabIndex = 33;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.ForeColor = Color.Black;
+            label15.Location = new Point(371, 420);
+            label15.Margin = new Padding(4, 0, 4, 0);
+            label15.Name = "label15";
+            label15.Size = new Size(56, 30);
+            label15.TabIndex = 30;
+            label15.Text = "CPF:";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.ForeColor = Color.Black;
+            label14.Location = new Point(67, 420);
+            label14.Margin = new Padding(4, 0, 4, 0);
+            label14.Name = "label14";
+            label14.Size = new Size(137, 30);
+            label14.TabIndex = 29;
+            label14.Text = "Proprietario:";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.ForeColor = Color.Black;
+            label13.Location = new Point(14, 380);
+            label13.Margin = new Padding(4, 0, 4, 0);
+            label13.Name = "label13";
+            label13.Size = new Size(190, 30);
+            label13.TabIndex = 28;
+            label13.Text = "Natureza Juridica:";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.ForeColor = Color.Black;
+            label12.Location = new Point(44, 341);
+            label12.Margin = new Padding(4, 0, 4, 0);
+            label12.Name = "label12";
+            label12.Size = new Size(160, 30);
+            label12.TabIndex = 27;
+            label12.Text = "Porte Empresa:";
             // 
             // btnVendas
             // 
@@ -264,7 +374,7 @@ namespace Venda_Bovina
             btnVendas.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnVendas.ForeColor = Color.Black;
             btnVendas.ImageAlign = ContentAlignment.MiddleLeft;
-            btnVendas.Location = new Point(309, 438);
+            btnVendas.Location = new Point(228, 492);
             btnVendas.Margin = new Padding(4, 3, 4, 3);
             btnVendas.Name = "btnVendas";
             btnVendas.Size = new Size(152, 45);
@@ -273,198 +383,175 @@ namespace Venda_Bovina
             btnVendas.UseVisualStyleBackColor = false;
             btnVendas.Click += btnVendas_Click;
             // 
-            // txt_funcao
+            // txt_capital
             // 
-            txt_funcao.Location = new Point(229, 376);
-            txt_funcao.Name = "txt_funcao";
-            txt_funcao.Size = new Size(351, 23);
-            txt_funcao.TabIndex = 23;
+            txt_capital.Location = new Point(226, 273);
+            txt_capital.Name = "txt_capital";
+            txt_capital.Size = new Size(126, 23);
+            txt_capital.TabIndex = 21;
             // 
-            // txt_salario
+            // txt_dataInicio
             // 
-            txt_salario.Location = new Point(229, 333);
-            txt_salario.Name = "txt_salario";
-            txt_salario.Size = new Size(351, 23);
-            txt_salario.TabIndex = 22;
+            txt_dataInicio.Location = new Point(226, 195);
+            txt_dataInicio.Name = "txt_dataInicio";
+            txt_dataInicio.Size = new Size(351, 23);
+            txt_dataInicio.TabIndex = 19;
             // 
-            // txt_endereco
+            // txt_nomeFantasia
             // 
-            txt_endereco.Location = new Point(229, 296);
-            txt_endereco.Name = "txt_endereco";
-            txt_endereco.Size = new Size(351, 23);
-            txt_endereco.TabIndex = 21;
+            txt_nomeFantasia.Location = new Point(226, 87);
+            txt_nomeFantasia.Name = "txt_nomeFantasia";
+            txt_nomeFantasia.Size = new Size(351, 23);
+            txt_nomeFantasia.TabIndex = 16;
             // 
-            // txt_email
+            // txt_razaoSocial
             // 
-            txt_email.Location = new Point(229, 257);
-            txt_email.Name = "txt_email";
-            txt_email.Size = new Size(351, 23);
-            txt_email.TabIndex = 20;
+            txt_razaoSocial.Location = new Point(226, 48);
+            txt_razaoSocial.Name = "txt_razaoSocial";
+            txt_razaoSocial.Size = new Size(351, 23);
+            txt_razaoSocial.TabIndex = 15;
             // 
-            // txt_telefone
+            // txt_cnpj
             // 
-            txt_telefone.Location = new Point(229, 218);
-            txt_telefone.Name = "txt_telefone";
-            txt_telefone.Size = new Size(351, 23);
-            txt_telefone.TabIndex = 19;
-            // 
-            // txt_estadoCivil
-            // 
-            txt_estadoCivil.Location = new Point(229, 179);
-            txt_estadoCivil.Name = "txt_estadoCivil";
-            txt_estadoCivil.Size = new Size(351, 23);
-            txt_estadoCivil.TabIndex = 18;
-            // 
-            // txt_dataNascimento
-            // 
-            txt_dataNascimento.Location = new Point(229, 142);
-            txt_dataNascimento.Name = "txt_dataNascimento";
-            txt_dataNascimento.Size = new Size(351, 23);
-            txt_dataNascimento.TabIndex = 17;
-            // 
-            // txt_rg
-            // 
-            txt_rg.Location = new Point(229, 110);
-            txt_rg.Name = "txt_rg";
-            txt_rg.Size = new Size(91, 23);
-            txt_rg.TabIndex = 16;
-            // 
-            // txt_cpf
-            // 
-            txt_cpf.Location = new Point(229, 71);
-            txt_cpf.Name = "txt_cpf";
-            txt_cpf.Size = new Size(351, 23);
-            txt_cpf.TabIndex = 15;
-            // 
-            // txt_nome
-            // 
-            txt_nome.Location = new Point(229, 33);
-            txt_nome.Name = "txt_nome";
-            txt_nome.Size = new Size(351, 23);
-            txt_nome.TabIndex = 14;
+            txt_cnpj.Location = new Point(226, 10);
+            txt_cnpj.Name = "txt_cnpj";
+            txt_cnpj.Size = new Size(351, 23);
+            txt_cnpj.TabIndex = 14;
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label10.ForeColor = Color.Black;
-            label10.Location = new Point(105, 367);
+            label10.Location = new Point(134, 303);
             label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
-            label10.Size = new Size(90, 30);
+            label10.Size = new Size(63, 30);
             label10.TabIndex = 13;
-            label10.Text = "Função:";
+            label10.Text = "Tipo:";
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(107, 332);
+            label9.Location = new Point(359, 268);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(86, 30);
+            label9.Size = new Size(109, 30);
             label9.TabIndex = 12;
-            label9.Text = "Salario:";
+            label9.Text = "Endereço:";
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.Black;
-            label8.Location = new Point(84, 287);
+            label8.Location = new Point(53, 264);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(109, 30);
+            label8.Size = new Size(151, 30);
             label8.TabIndex = 11;
-            label8.Text = "Endereço:";
+            label8.Text = "Capital Social:";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(121, 248);
+            label7.Location = new Point(102, 225);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(72, 30);
+            label7.Size = new Size(102, 30);
             label7.TabIndex = 10;
-            label7.Text = "Email:";
+            label7.Text = "Telefone:";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(93, 211);
+            label6.Location = new Point(79, 188);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(102, 30);
+            label6.Size = new Size(125, 30);
             label6.TabIndex = 9;
-            label6.Text = "Telefone:";
+            label6.Text = "Data Inicio:";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(69, 172);
+            label5.Location = new Point(10, 149);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(132, 30);
+            label5.Size = new Size(194, 30);
             label5.TabIndex = 8;
-            label5.Text = "Estado Civil:";
+            label5.Text = "Regime Tributario:";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(8, 133);
+            label4.Location = new Point(5, 112);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(187, 30);
+            label4.Size = new Size(199, 30);
             label4.TabIndex = 7;
-            label4.Text = "Data Nascimento:";
+            label4.Text = "Situação Cadastral:";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(147, 103);
+            label3.Location = new Point(40, 78);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(48, 30);
+            label3.Size = new Size(164, 30);
             label3.TabIndex = 6;
-            label3.Text = "RG:";
+            label3.Text = "Nome Fantasia:";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(139, 64);
+            label1.Location = new Point(62, 39);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(56, 30);
+            label1.Size = new Size(142, 30);
             label1.TabIndex = 5;
-            label1.Text = "CPF:";
+            label1.Text = "Razão Social:";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(122, 26);
+            label2.Location = new Point(134, 3);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(79, 30);
+            label2.Size = new Size(70, 30);
             label2.TabIndex = 4;
-            label2.Text = "Nome:";
+            label2.Text = "CNPJ:";
             label2.Click += label2_Click;
             // 
-            // FormInicial
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = Color.FromArgb(128, 64, 0);
+            label11.Location = new Point(13, 9);
+            label11.Margin = new Padding(4, 0, 4, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(187, 30);
+            label11.TabIndex = 3;
+            label11.Text = "Cadastro Empresa";
+            // 
+            // FormEmpresa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -474,12 +561,11 @@ namespace Venda_Bovina
             Controls.Add(panelCabecalho);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
-            Name = "FormInicial";
+            Name = "FormEmpresa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panelCabecalho.ResumeLayout(false);
-            panelMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panelCabecalho.PerformLayout();
             panelConteudo.ResumeLayout(false);
             panelConteudo.PerformLayout();
             ResumeLayout(false);
@@ -507,28 +593,28 @@ namespace Venda_Bovina
         private Label label5;
         private Label label4;
         private Button btnVendas;
-        private TextBox txt_funcao;
-        private TextBox txt_salario;
-        private TextBox txt_endereco;
-        private TextBox txt_email;
-        private TextBox txt_telefone;
-        private TextBox txt_estadoCivil;
-        private TextBox txt_dataNascimento;
-        private TextBox txt_rg;
+        private TextBox txt_capital;
+        private TextBox txt_dataInicio;
+        private TextBox txt_nomeFantasia;
+        private TextBox txt_razaoSocial;
+        private TextBox txt_cnpj;
+        private RadioButton btn_lucroReal;
+        private RadioButton btn_simplesNacional;
+        private ComboBox combo_situacaoCadastral;
+        private ComboBox combo_endereco;
+        private ComboBox combo_naturezaJuridica;
+        private Label label15;
+        private Label label14;
+        private Label label13;
+        private Label label12;
         private TextBox txt_cpf;
-        private TextBox txt_nome;
+        private TextBox txt_proprietario;
+        private RadioButton btn_grande;
+        private RadioButton btn_medio;
+        private RadioButton btn_pequeno;
+        private RadioButton btn_filial;
+        private RadioButton btn_matriz;
+        private MaskedTextBox txt_telefone;
         private Label label11;
-        private TextBox textBox1;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column8;
-        private DataGridViewTextBoxColumn Column9;
-        private DataGridViewTextBoxColumn Column10;
     }
 }

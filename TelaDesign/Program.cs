@@ -6,6 +6,7 @@ namespace TelaDesign
     {
         public static List<Funcionario> funcionarios = new List<Funcionario>();
         public static List<Funcionario> funcionariosLista = new List<Funcionario>();
+        public static List<Empresa> empresas = new List<Empresa>();
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

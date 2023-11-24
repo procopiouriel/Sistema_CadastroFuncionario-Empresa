@@ -1,7 +1,7 @@
 ﻿
 namespace Venda_Bovina
 {
-    partial class FormInicial
+    partial class FormFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -22,7 +22,7 @@ namespace Venda_Bovina
         }
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicial));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFuncionario));
             panelCabecalho = new Panel();
             btnFechar = new Button();
             btnRestaurar = new Button();
@@ -63,6 +63,7 @@ namespace Venda_Bovina
             label3 = new Label();
             label1 = new Label();
             label2 = new Label();
+            label12 = new Label();
             panelCabecalho.SuspendLayout();
             panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -72,6 +73,7 @@ namespace Venda_Bovina
             // panelCabecalho
             // 
             panelCabecalho.BackColor = Color.Goldenrod;
+            panelCabecalho.Controls.Add(label12);
             panelCabecalho.Controls.Add(btnFechar);
             panelCabecalho.Controls.Add(btnRestaurar);
             panelCabecalho.Controls.Add(btnMaximizar);
@@ -464,7 +466,19 @@ namespace Venda_Bovina
             label2.Text = "Nome:";
             label2.Click += label2_Click;
             // 
-            // FormInicial
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.ForeColor = Color.FromArgb(128, 64, 0);
+            label12.Location = new Point(13, 9);
+            label12.Margin = new Padding(4, 0, 4, 0);
+            label12.Name = "label12";
+            label12.Size = new Size(222, 30);
+            label12.TabIndex = 27;
+            label12.Text = "Cadastro Funcionario";
+            // 
+            // FormFuncionario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -474,10 +488,11 @@ namespace Venda_Bovina
             Controls.Add(panelCabecalho);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
-            Name = "FormInicial";
+            Name = "FormFuncionario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panelCabecalho.ResumeLayout(false);
+            panelCabecalho.PerformLayout();
             panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panelConteudo.ResumeLayout(false);
@@ -530,5 +545,6 @@ namespace Venda_Bovina
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
         private DataGridViewTextBoxColumn Column10;
+        private Label label12;
     }
 }

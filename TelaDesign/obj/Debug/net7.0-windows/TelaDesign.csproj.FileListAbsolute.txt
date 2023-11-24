@@ -32,3 +32,7 @@ C:\Users\2022102020037\source\repos\TelaDesign\TelaDesign\bin\Debug\net7.0-windo
 C:\Users\2022102020037\source\repos\TelaDesign\TelaDesign\bin\Debug\net7.0-windows\runtimes\win-x64\native\k5sprt64.dll
 C:\Users\2022102020037\source\repos\TelaDesign\TelaDesign\bin\Debug\net7.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\2022102020037\source\repos\TelaDesign\TelaDesign\bin\Debug\net7.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\2022102020037\source\repos\TelaDesign\TelaDesign\obj\Debug\net7.0-windows\Venda_Bovina.FormConsultarEmpresa.resources
+C:\Users\2022102020037\source\repos\TelaDesign\TelaDesign\obj\Debug\net7.0-windows\Venda_Bovina.FormConsultarFuncionario.resources
+C:\Users\2022102020037\source\repos\TelaDesign\TelaDesign\obj\Debug\net7.0-windows\Venda_Bovina.FormEmpresa.resources
+C:\Users\2022102020037\source\repos\TelaDesign\TelaDesign\obj\Debug\net7.0-windows\Venda_Bovina.FormFuncionario.resources

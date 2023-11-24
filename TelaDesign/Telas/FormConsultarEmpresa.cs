@@ -14,9 +14,9 @@ using TelaDesign;
 
 namespace Venda_Bovina
 {
-    public partial class FormInicial : Form
+    public partial class FormConsultarEmpresa : Form
     {
-        public FormInicial()
+        public FormConsultarEmpresa()
         {
             InitializeComponent();
             Consultar();

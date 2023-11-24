@@ -14,17 +14,13 @@ using TelaDesign;
 
 namespace Venda_Bovina
 {
-    public partial class FormInicial : Form
+    public partial class FormEmpresa : Form
     {
-        public FormInicial()
+        public FormEmpresa()
         {
             InitializeComponent();
-            Consultar();
-            foreach (Funcionario str in Program.funcionariosLista)
-            {
-                dataGridView1.Rows.Add(str.Nome, str.Cpf, str.Rg, str.DataNascimento, str.EstadoCivil, str.Telefone, str.Email, str.Endereco, str.Salario, str.Funcao);
-            }
-            
+
+
         }
         public void Inserir()
         {
@@ -34,29 +30,33 @@ namespace Venda_Bovina
             {
                 Conexao conexao = new Conexao();
 
-                var comando = conexao.Comando("INSERT INTO funcionario (nome_fun, cpf_fun, dataNascimento_fun, rg_fun, telefone_fun, email_fun, endereco_fun, estadoCivil_fun, funcao_fun, salario_fun) VALUES (@nome, @cpf, @dataNascimento, @rg, @telefone, @email, @endereco, @estadoCivil, @funcao, @salario)");
-                foreach (Funcionario str in Program.funcionarios)
+                var comando = conexao.Comando("INSERT INTO empresa (cnpj_emp, razaoSocial_emp, nomeFantasia_emp, situacaoCadastral_emp, regimeTributario_emp, dataInicio_emp, telefone_emp, capitalSocial_emp, endereco_emp, tipo_emp, porteEmpresa_emp, naturezaJuridica_emp, proprietario_emp, cpf_emp) VALUES (@cnpj, @razaoSocial, @nomeFantasia, @situacaoCadastral, @regimeTributario, @dataInicio, @telefone, @capitalSocial, @endereco, @tipo, @porteEmpresa, @naturezaJuridica, @proprietario, @cpf)");
+                foreach (Empresa str in Program.empresas)
                 {
-                    comando.Parameters.AddWithValue("@nome", str.Nome.Trim());//O TRIM TIRA O ULTIMO ESPAÇAMENTO CASO TENHA
-                    comando.Parameters.AddWithValue("@cpf", str.Cpf);
-                    comando.Parameters.AddWithValue("@dataNascimento", str.DataNascimento);
-                    comando.Parameters.AddWithValue("@rg", str.Rg);
+                    comando.Parameters.AddWithValue("@cnpj", str.Cnpj.Trim());//O TRIM TIRA O ULTIMO ESPAÇAMENTO CASO TENHA
+                    comando.Parameters.AddWithValue("@razaoSocial", str.RazaoSocial);
+                    comando.Parameters.AddWithValue("@nomeFantasia", str.NomeFantasia);
+                    comando.Parameters.AddWithValue("@situacaoCadastral", str.SituacaoCadastral);
+                    comando.Parameters.AddWithValue("@regimeTributario", str.RegimeTributario);
+                    comando.Parameters.AddWithValue("@dataInicio", str.DataInicio);
                     comando.Parameters.AddWithValue("@telefone", str.Telefone);
-                    comando.Parameters.AddWithValue("@email", str.Email);
+                    comando.Parameters.AddWithValue("@capitalSocial", str.CapitalSocial);
                     comando.Parameters.AddWithValue("@endereco", str.Endereco);
-                    comando.Parameters.AddWithValue("@estadoCivil", str.EstadoCivil);
-                    comando.Parameters.AddWithValue("@funcao", str.Funcao);
-                    comando.Parameters.AddWithValue("@salario", str.Salario);
+                    comando.Parameters.AddWithValue("@tipo", str.Tipo);
+                    comando.Parameters.AddWithValue("@porteEmpresa", str.PorteEmpresa);
+                    comando.Parameters.AddWithValue("@naturezaJuridica", str.NaturezaJuridica);
+                    comando.Parameters.AddWithValue("@proprietario", str.Proprietario);
+                    comando.Parameters.AddWithValue("@cpf", str.CPF);
 
                 }
-                Program.funcionarios.Clear();
+                Program.empresas.Clear();
 
 
                 var resultado = comando.ExecuteNonQuery();
 
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Funcionario Cadastrado com sucesso!");
+                    MessageBox.Show("Empresa Cadastrado com sucesso!");
                 }
 
 
@@ -72,7 +72,7 @@ namespace Venda_Bovina
             try
             {
                 var conexao = new Conexao();
-                var comando = conexao.Comando("SELECT * FROM Funcionario");
+                var comando = conexao.Comando("SELECT * FROM Empresa");
                 var leitor = comando.ExecuteReader();
 
 
@@ -137,39 +137,64 @@ namespace Venda_Bovina
         {
             try
             {
-                string nome = txt_nome.Text;
-                string cpf = txt_cpf.Text;
-                string rg = txt_rg.Text;
-                DateTime dataNascimento = Convert.ToDateTime(txt_dataNascimento.Text);
-                string estadoCivil = txt_estadoCivil.Text;
-                string telefone = txt_telefone.Text;
-                string email = txt_email.Text;
-                string endereco = txt_endereco.Text;
-                double salario = Convert.ToDouble(txt_salario.Text);
-                string funcao = txt_funcao.Text;
+                string cnpj = txt_cnpj.Text;
+                string razaoSocial = txt_razaoSocial.Text;
+                string nomeFantasia = txt_nomeFantasia.Text;
+                string situacaoCadastral = combo_situacaoCadastral.Text;
+                string regimeTributario = "";
 
-                if (nome == "" || cpf == "" || rg == "" || dataNascimento == null || telefone == "" || email == "" || endereco == "" || salario == null || funcao == "")
+                if (btn_simplesNacional.Checked)
                 {
-                    MessageBox.Show("Preencha todos os campos!");
+                    regimeTributario = btn_simplesNacional.Text;
                 }
                 else
                 {
-                    if (Validador.CPF(cpf) == true)
-                    {
-                        Funcionario conexao = new Funcionario(nome, cpf, rg, dataNascimento, estadoCivil, telefone, email, endereco, salario, funcao);
-                        Program.funcionarios.Add(conexao);
-                        MessageBox.Show("Salvo!");
-                        Inserir();
-                        FormInicial tela = new FormInicial();
-                        this.Visible = false;
-                        tela.ShowDialog();
-                    }
-                    else
-                    {
-                        MessageBox.Show("CPF FALSO");
-                    }
-
+                    regimeTributario = btn_lucroReal.Text;
                 }
+
+                DateTime dataInicio = Convert.ToDateTime(txt_dataInicio.Text);
+                string telefone = txt_telefone.Text;
+                double capitalSocial = Convert.ToDouble(txt_capital.Text);
+                string endereco = combo_endereco.Text;
+                string tipo = "";
+
+                if (btn_matriz.Checked)
+                {
+                    tipo = btn_matriz.Text;
+                }
+                else
+                {
+                    tipo = btn_filial.Text;
+                }
+
+                string porteEmpresa = "";
+
+                if (btn_pequeno.Checked)
+                {
+                    porteEmpresa = btn_pequeno.Text;
+                }
+                else if (btn_medio.Checked)
+                {
+                    porteEmpresa = btn_medio.Text;
+                }
+                else if (btn_grande.Checked)
+                {
+                    porteEmpresa = btn_grande.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Preencha todos os campos!");
+                }
+                string naturezaJuridica = combo_naturezaJuridica.Text;
+                string proprietario = txt_proprietario.Text;
+                string cpf = txt_cpf.Text;
+
+                Empresa conexao = new Empresa(cnpj, razaoSocial, nomeFantasia, situacaoCadastral, regimeTributario, dataInicio, telefone, capitalSocial, endereco, tipo, porteEmpresa, naturezaJuridica, proprietario, cpf);
+                Program.empresas.Add(conexao);
+
+
+
+
 
             }
             catch (Exception ex)

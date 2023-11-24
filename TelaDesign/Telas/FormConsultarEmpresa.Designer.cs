@@ -1,7 +1,7 @@
 ﻿
 namespace Venda_Bovina
 {
-    partial class FormInicial
+    partial class FormConsultarEmpresa
     {
         /// <summary>
         /// Required designer variable.
@@ -22,7 +22,7 @@ namespace Venda_Bovina
         }
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicial));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultarEmpresa));
             panelCabecalho = new Panel();
             btnFechar = new Button();
             btnRestaurar = new Button();
