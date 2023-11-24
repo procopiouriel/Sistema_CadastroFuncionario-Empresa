@@ -117,6 +117,7 @@ namespace Venda_Bovina
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(933, 567);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column1
             // 

@@ -1813,11 +1813,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\2022102020037\\source\\repos\\TelaDesign\\TelaDesign\\TelaDesign.csproj",
+      "projectUniqueName": "C:\\Users\\2022102020037\\Desktop\\Cadastro_Funcionario\\TelaDesign\\TelaDesign.csproj",
       "projectName": "TelaDesign",
-      "projectPath": "C:\\Users\\2022102020037\\source\\repos\\TelaDesign\\TelaDesign\\TelaDesign.csproj",
+      "projectPath": "C:\\Users\\2022102020037\\Desktop\\Cadastro_Funcionario\\TelaDesign\\TelaDesign.csproj",
       "packagesPath": "C:\\Users\\2022102020037\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\2022102020037\\source\\repos\\TelaDesign\\TelaDesign\\obj\\",
+      "outputPath": "C:\\Users\\2022102020037\\Desktop\\Cadastro_Funcionario\\TelaDesign\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1832,7 +1832,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

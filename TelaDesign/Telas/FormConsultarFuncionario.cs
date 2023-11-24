@@ -138,5 +138,10 @@ namespace Venda_Bovina
 
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

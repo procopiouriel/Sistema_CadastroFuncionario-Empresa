@@ -19,10 +19,10 @@ namespace Venda_Bovina
         public FormInicial()
         {
             InitializeComponent();
-            
+
 
         }
-        
+
 
 
 
@@ -72,8 +72,36 @@ namespace Venda_Bovina
 
         private void btnVendas_Click(object sender, EventArgs e)
         {
-            
 
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            FormFuncionario tela = new FormFuncionario();
+            this.Visible = false;
+            tela.ShowDialog();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FormEmpresa tela = new FormEmpresa();
+            this.Visible = false;
+            tela.ShowDialog();
+        }
+
+        private void btnVendas_Click_1(object sender, EventArgs e)
+        {
+            FormConsultarFuncionario tela = new FormConsultarFuncionario();
+            this.Visible = false;
+            tela.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormConsultarEmpresa tela = new FormConsultarEmpresa();
+            this.Visible = false;
+            tela.ShowDialog();
         }
     }
 }
